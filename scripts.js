@@ -25,6 +25,18 @@ $('.colors').on("click", function() {
 });
 
 // Creating event listener for the canvas
-$('.box').on("click", function () {
-  event.target.style.backgroundColor = brush;
+$(document).ready(function(){
+
+  var isDown = false;   // Tracks status of mouse button
+
+  $(document).mousedown(function() {
+    isDown = true;      // When mouse goes down, set isDown to true
+  })
+  .mouseup(function() {
+    isDown = false;    // When mouse goes up, set isDown to false
+  });
+  $('.box').mouseover(function () {
+    if(isDown) {
+      event.target.style.backgroundColor = brush};
+  });
 });
