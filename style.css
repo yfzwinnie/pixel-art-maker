@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+
+#wrapper {
+  width: 800px;
+  height: 500px;
+  margin: 5% 10%;
+}
+
+.box {
+  border: 1px solid #DDDDDD;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  position: relative;
+  float: left;
+  background-color: white;
+}
+
+
+.colors {
+  border-radius: 100%;
+  border: 1px solid #DDDDDD;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  margin: 0 1px;
+}
+
+#palette {
+  margin: 0 20% 0 10%;
+}
