@@ -2,7 +2,7 @@
 
 // Creating multiple div tags to expand canvas
 var canvasContainer = $("#wrapper");
-var count = 4000;
+var count = 2400;
 for (var i=0; i<count; i++) {
    canvasContainer.append("<div class='box'></div>");
 }
@@ -10,7 +10,7 @@ for (var i=0; i<count; i++) {
 // Creating multiple div tags for different colors
 var colorChoices = ['LightPink','LightCoral','IndianRed','Salmon','Coral','Gold','Orange','Moccasin','Khaki','DarkKhaki','BurlyWood','GoldenRod','SandyBrown','DarkSeaGreen','ForestGreen','LightGreen','MediumSeaGreen','MediumSpringGreen','PaleGreen','LightCyan','CadetBlue','DarkCyan','Teal','LightBlue','CornflowerBlue', 'DodgerBlue', 'DeepSkyBlue', 'Blue', 'DarkSlateBlue', 'MediumPurple', 'LightGrey', 'Grey','White','Black'];
 var paletteContainer = $("#palette");
-for(var j=0; j <colorChoices.length-2; j++) {
+for(var j=0; j <colorChoices.length; j++) {
   paletteContainer.append("<div class='colors'></div>");
   $('.colors').each(function(j, element) {
     $(element).css('backgroundColor', colorChoices[j]);
@@ -37,6 +37,8 @@ $(document).ready(function(){
   });
   $('.box').mouseover(function () {
     if(isDown) {
-      event.target.style.backgroundColor = brush};
+      event.target.style.backgroundColor = brush;
+      event.target.style.border = brush;
+    };
   });
 });
