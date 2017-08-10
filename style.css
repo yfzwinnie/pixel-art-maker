@@ -2,10 +2,24 @@
   box-sizing: border-box;
 }
 
+body{
+  background-image: url(images/drawing-pad-1209781_1920.jpg);
+  background-repeat: no-repeat;;
+  background-size: cover;
+  max-width: 1400px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 5%;
+  font-family: 'Coming Soon', cursive;
+  font-size: 4em;
+}
+
 #wrapper {
-  width: 800px;
-  height: 500px;
-  margin: 5% 10%;
+  width: 600px;
+  height: 360px;
+  margin: 8% 25% 5% 28%;
 }
 
 .box {
@@ -29,5 +43,6 @@
 }
 
 #palette {
-  margin: 0 20% 0 10%;
-}
+  margin: 0 30%;
+  float: right;
+  position: relative;
