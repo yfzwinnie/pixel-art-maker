@@ -1,25 +1,32 @@
 * {
   box-sizing: border-box;
+  font-family: 'Coming Soon', cursive;
 }
 
 body{
   background-image: url(images/drawing-pad-1209781_1920.jpg);
   background-repeat: no-repeat;;
-  background-size: cover;
-  max-width: 1400px;
+  background-size: 100% 320%;
 }
 
 h1 {
   text-align: center;
-  margin-top: 5%;
-  font-family: 'Coming Soon', cursive;
+  margin-top: 2.5%;
   font-size: 4em;
+}
+
+p {
+  font-size: 1.1em;
+  font-weight: bolder;
 }
 
 #wrapper {
   width: 600px;
   height: 360px;
-  margin: 8% 25% 5% 28%;
+  position: fixed;
+  left: 285px;
+  top: 250px;
+  /*margin: 4% 25% 5% 28%;*/
 }
 
 .box {
@@ -27,7 +34,6 @@ h1 {
   width: 10px;
   height: 10px;
   display: inline-block;
-  position: relative;
   float: left;
   background-color: white;
 }
@@ -43,6 +49,35 @@ h1 {
 }
 
 #palette {
-  margin: 0 30%;
+  margin: 0 21% 0 4%;
   float: right;
+  position: fixed;
+  left: 840px;
+  top: 220px;
+  padding: 0 1px 0 4px;
+}
+
+#color_picker {
+  position: absolute;
+  top: 480px;
+  left: 898px;
+  padding: 0 5px 0 7px;
+}
+
+#color {
+  margin: 0 80px 5px 80px;
+}
+
+#current_color {
+  width: 150px;
+  height: 30px;
+  border: 1px solid #000;
+  background-color: #fff;
+  padding-bottom: -10px;
+}
+
+#color_value {
   position: relative;
+  left: 900px;
+  top: 400px;
+}
