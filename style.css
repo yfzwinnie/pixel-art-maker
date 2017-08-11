@@ -6,18 +6,19 @@
 body{
   background-image: url(images/drawing-pad-1209781_1920.jpg);
   background-repeat: no-repeat;;
-  background-size: 100% 320%;
+  background-size: 100% 300%;
 }
 
 h1 {
   text-align: center;
-  margin-top: 2.5%;
+  margin-top: 2%;
   font-size: 4em;
 }
 
 p {
   font-size: 1.1em;
   font-weight: bolder;
+  margin: 0 0 3px 3px;
 }
 
 #wrapper {
@@ -53,13 +54,13 @@ p {
   float: right;
   position: fixed;
   left: 840px;
-  top: 220px;
+  top: 250px;
   padding: 0 1px 0 4px;
 }
 
 #color_picker {
   position: absolute;
-  top: 480px;
+  top: 485px;
   left: 898px;
   padding: 0 5px 0 7px;
 }
@@ -73,11 +74,18 @@ p {
   height: 30px;
   border: 1px solid #000;
   background-color: #fff;
-  padding-bottom: -10px;
 }
 
 #color_value {
   position: relative;
   left: 900px;
-  top: 400px;
+  top: 385px;
+}
+
+#color_wheel {
+  margin-left:3px;
+}
+
+#reset {
+  margin-top: 15px;
 }

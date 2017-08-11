@@ -37,6 +37,8 @@ $('#color_wheel').change(function() {
 // Creating event listener for the canvas
 $(document).ready(function(){
 
+  $("div").css('cursor','url(images/paintbrush-png-20.png),auto');
+
   var isDown = false;   // Tracks status of mouse button
 
   $(document).mousedown(function() {
@@ -51,4 +53,10 @@ $(document).ready(function(){
       event.target.style.border = brush;
     };
   });
+});
+
+// Event listener for reset button
+$('#reset').click(function () {
+  $('.box').css('backgroundColor', '');
+  $('.box').css('border', '1px solid #DDDDDD');
 });
