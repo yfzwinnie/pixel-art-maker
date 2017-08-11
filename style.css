@@ -25,7 +25,7 @@ p {
   width: 600px;
   height: 360px;
   position: fixed;
-  left: 285px;
+  left: 255px;
   top: 250px;
   /*margin: 4% 25% 5% 28%;*/
 }
@@ -50,10 +50,10 @@ p {
 }
 
 #palette {
-  margin: 0 21% 0 4%;
+  margin: 0 22% 0 4%;
   float: right;
   position: fixed;
-  left: 840px;
+  left: 805px;
   top: 250px;
   padding: 0 1px 0 4px;
 }
@@ -88,4 +88,12 @@ p {
 
 #reset {
   margin-top: 15px;
+}
+
+#paint {
+  visibility: hidden;
+}
+
+#eraser {
+  margin-left: -50px;
 }

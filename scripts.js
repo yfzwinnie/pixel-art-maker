@@ -55,8 +55,53 @@ $(document).ready(function(){
   });
 });
 
+// Creating event listener for the canvas
+$(document).ready(function(){
+  $('#paint').click(function () {
+    $("div").css('cursor','url(images/paintbrush-png-20.png),auto');
+    $("#eraser").css('visibility', 'visible');
+    $("#paint").css('visibility', 'hidden');
+
+    var isDown = false;   // Tracks status of mouse button
+
+    $(document).mousedown(function() {
+      isDown = true;      // When mouse goes down, set isDown to true
+    })
+    .mouseup(function() {
+      isDown = false;    // When mouse goes up, set isDown to false
+    });
+    $('.box').mouseover(function () {
+      if(isDown) {
+        event.target.style.backgroundColor = brush;
+        event.target.style.border = brush;
+      };
+    });
+  });
+});
+
+
 // Event listener for reset button
 $('#reset').click(function () {
   $('.box').css('backgroundColor', '');
   $('.box').css('border', '1px solid #DDDDDD');
+});
+
+$('#eraser').click(function () {
+  $("div").css('cursor','url(images/eraser.png),auto');
+  $("#eraser").css('visibility', 'hidden');
+  $("#paint").css('visibility', 'visible');
+  var isDown = false;   // Tracks status of mouse button
+
+  $(document).mousedown(function() {
+    isDown = true;      // When mouse goes down, set isDown to true
+  })
+  .mouseup(function() {
+    isDown = false;    // When mouse goes up, set isDown to false
+  });
+  $('.box').mouseover(function () {
+    if(isDown) {
+      event.target.style.backgroundColor = '';
+      event.target.style.border = '1px solid #DDDDDD';
+    };
+  });
 });
