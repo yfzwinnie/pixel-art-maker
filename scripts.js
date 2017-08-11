@@ -1,10 +1,14 @@
 'use strict'
 
-// Creating multiple div tags to expand canvas
+// Creating multiple div tags to ex24and canvas
 var canvasContainer = $("#wrapper");
 var count = 2400;
 for (var i=0; i<count; i++) {
    canvasContainer.append("<div class='box'></div>");
+}
+
+function showVal(newVal){
+    $("#current_color").css('backgroundColor', newVal);
 }
 
 // Creating multiple div tags for different colors
@@ -22,6 +26,12 @@ var brush;
 
 $('.colors').on("click", function() {
   brush = $(event.target).css("background-color");
+  showVal(brush);
+});
+
+$('#color_wheel').change(function() {
+  brush = $("#color_wheel").val();
+  showVal(brush);
 });
 
 // Creating event listener for the canvas
