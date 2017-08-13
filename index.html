@@ -10,29 +10,29 @@
   <header>
     <h1>Pixel Art Maker</h1>
   </header>
-  <div id="container">
+  <div id="container" class="group">
     <div id="wrapper">
     </div>
-  </div>
-  <div id="palette">
-    <p>Select a color to start:</p>
-  </div>
-  <div id="color_picker">
-    <p>Or pick a custom color here:</p>
-    <input type="color" id="color_wheel">
-  </div>
-  <div id="color_value">
-    <p>Current color:</p>
-    <div id="current_color">
+    <div id="options">
+      <div id="palette">
+        <p>Select a color to start:</p>
+      </div>
+      <div>
+        <p>Or pick a custom color here:</p>
+        <input type="color" id="color_wheel">
+      </div>
+      <div>
+        <p>Current color:</p>
+        <div id="current_color">
+        </div>
+      </div>
+    <div id="tools">
+      <button id="eraser">Eraser</button>
+      <button id="reset">Reset</button>
+      <button id="save">Save</button>
+      <button id="load">Load</button>
     </div>
-  <div>
-  <div>
-    <button id="paint">Paint</button>
-    <button id="eraser">Eraser</button>
-    <button id="reset">Reset</button>
-    <button id="save">Save</button>
-    <button id="load">Load</button>
-  <div>
+  </div>
   <script
   src="http://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
