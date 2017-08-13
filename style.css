@@ -5,14 +5,16 @@
 
 body{
   background-image: url(images/drawing-pad-1209781_1920.jpg);
-  background-repeat: no-repeat;;
-  background-size: 100% 300%;
+  background-repeat: no-repeat;
+  background-size: 1500px 825px;
+  position: fixed;
 }
 
 h1 {
-  text-align: center;
-  margin-top: 2%;
-  font-size: 4em;
+  font-size: 3em;
+  position: relative;
+  left: 490px;
+  top: 50px;
 }
 
 p {
@@ -21,13 +23,16 @@ p {
   margin: 0 0 3px 3px;
 }
 
+#container {
+  width: 1000px;
+  position: absolute;
+  top: 250px;
+  left: 270px;
+}
+
 #wrapper {
   width: 600px;
-  height: 360px;
-  position: fixed;
-  left: 255px;
-  top: 250px;
-  /*margin: 4% 25% 5% 28%;*/
+  float: left;
 }
 
 .box {
@@ -39,7 +44,6 @@ p {
   background-color: white;
 }
 
-
 .colors {
   border-radius: 100%;
   border: 1px solid #DDDDDD;
@@ -49,24 +53,23 @@ p {
   margin: 0 1px;
 }
 
+#options {
+  float: left;
+  width: 250px;
+  margin-left: 25px;
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 #palette {
-  margin: 0 22% 0 4%;
-  float: right;
-  position: fixed;
-  left: 805px;
-  top: 250px;
-  padding: 0 1px 0 4px;
+  margin-bottom: 15px;
 }
 
-#color_picker {
-  position: absolute;
-  top: 485px;
-  left: 898px;
-  padding: 0 5px 0 7px;
-}
-
-#color {
-  margin: 0 80px 5px 80px;
+#color_wheel {
+  margin-bottom: 15px;
 }
 
 #current_color {
@@ -76,24 +79,6 @@ p {
   background-color: #fff;
 }
 
-#color_value {
-  position: relative;
-  left: 900px;
-  top: 385px;
-}
-
-#color_wheel {
-  margin-left:3px;
-}
-
-#reset {
+#tools {
   margin-top: 15px;
-}
-
-#paint {
-  visibility: hidden;
-}
-
-#eraser {
-  margin-left: -50px;
 }
