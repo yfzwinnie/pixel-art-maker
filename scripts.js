@@ -88,15 +88,16 @@ $('#save').click(function () {
   var grid = $('.box');
   var gridobject = {};
   grid.each(function(i, box) {
-    gridobject[i] = $(box).css('background-color')
+    gridobject[i] = [$(box).css('background-color'),$(box).css('border')]
   });
   localStorage.setItem('gridobject', JSON.stringify(gridobject));
+  console.log(gridobject);
 });
 
 $('#load').click(function() {
   var restoredSession = JSON.parse(localStorage.getItem('gridobject'));
-  //restoredSession = {"0":bg}
   for (var id in restoredSession) {
-    $('#'+id).css('backgroundColor', restoredSession[id]);
+    $('#'+id).css('backgroundColor', restoredSession[id][0]);
+    $('#'+id).css('border', restoredSession[id][1]);
   };
 });
