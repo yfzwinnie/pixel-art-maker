@@ -4,7 +4,7 @@
 var canvasContainer = $("#wrapper");
 var count = 2400;
 for (var i=0; i<count; i++) {
-   canvasContainer.append("<div class='box'></div>");
+  canvasContainer.append(`<div class='box' id='${i}'></div>`);
 }
 
 function showVal(newVal){
@@ -26,14 +26,16 @@ var brush;
 
 $('.colors').on("click", function() {
   $("body").css('cursor','url(images/paintbrush-png-20.png),auto');
-  $("#eraser").css('visibility', 'visible');
+  $("#paint").hide();
+  $("#eraser").show();
   brush = $(event.target).css("background-color");
   showVal(brush);
 });
 
 $('#color_wheel').change(function() {
   $("body").css('cursor','url(images/paintbrush-png-20.png),auto');
-  $("#eraser").css('visibility', 'visible');
+  $("#paint").hide();
+  $("#eraser").show();
   brush = $("#color_wheel").val();
   showVal(brush);
 });
@@ -60,14 +62,41 @@ function paint(color) {
 // Creating event listener for the paint and eraser button
 $(document).ready(function(){
   paint();
+  $('#paint').click(function () {
+    paint();
+    brush = $('#current_color').css("background-color");
+    $("#eraser").show();
+    $("#paint").hide();
+  });
   $('#eraser').click(function () {
     brush = '';
     $("body").css('cursor','url(images/eraser.png),auto');
+    $("#eraser").hide();
+    $("#paint").show();
   });
 });
+
 
 // Event listener for reset button
 $('#reset').click(function () {
   $('.box').css('backgroundColor', '');
   $('.box').css('border', '1px solid #DDDDDD');
+});
+
+// Event Listener for save button
+$('#save').click(function () {
+  var grid = $('.box');
+  var gridobject = {};
+  grid.each(function(i, box) {
+    gridobject[i] = $(box).css('background-color')
+  });
+  localStorage.setItem('gridobject', JSON.stringify(gridobject));
+});
+
+$('#load').click(function() {
+  var restoredSession = JSON.parse(localStorage.getItem('gridobject'));
+  //restoredSession = {"0":bg}
+  for (var id in restoredSession) {
+    $('#'+id).css('backgroundColor', restoredSession[id]);
+  };
 });

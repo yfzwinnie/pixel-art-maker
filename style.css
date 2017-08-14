@@ -6,7 +6,7 @@
 body{
   background-image: url(images/drawing-pad-1209781_1920.jpg);
   background-repeat: no-repeat;
-  background-size: 1500px 825px;
+  background-size: 1500px 900px;
   position: fixed;
 }
 
@@ -82,3 +82,11 @@ p {
 #tools {
   margin-top: 15px;
 }
+
+#paint {
+  display: none;
+}
+
+/*#eraser {
+  visibility: visible;
+}*/
